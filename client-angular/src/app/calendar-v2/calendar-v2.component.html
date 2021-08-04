@@ -1,0 +1,17 @@
+<div>
+  <div class="calendar-menu">
+    <button (click)="before()">Before</button>
+    <p>{{date | date: 'MMMM'}} {{date | date: 'y'}}</p>
+    <button (click)="next()">next</button>
+  </div>
+  <ul>
+    <li *ngFor="let date of arrayDays" (click)="selectedDate = date.date">
+      <h4>{{date.day}}</h4>
+      <p>{{date.date | date:'dd/MM/yy'}}</p>
+    </li>
+  </ul>
+
+  <p>Date sélectionnée : {{selectedDate}}</p>
+
+</div>
+

@@ -1,0 +1,10 @@
+<ul>
+  <li><a routerLink="modal">component-modal-two</a></li>
+</ul>
+
+<app-calendar-component (selected)="selected = $event"></app-calendar-component>
+selected: {{selected | date:'long'}}
+
+<app-calendar-v2></app-calendar-v2>
+
+<router-outlet></router-outlet>

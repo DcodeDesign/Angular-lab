@@ -1,0 +1,6 @@
+<div>
+  <h3>Name {{data.name}}</h3>
+  <p>{{data.bio}}</p>
+
+  <button (click)="close()" [ModalClose]="{name: data.name, bio: data.bio}"> close </button>
+</div>

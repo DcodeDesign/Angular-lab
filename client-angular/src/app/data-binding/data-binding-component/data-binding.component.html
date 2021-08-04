@@ -1,0 +1,6 @@
+<p>signin works!</p>
+<input type="text" [value]="myData" (keyup)="changeText(textInput.value)" #textInput>
+<br>
+<input type="text" [value]="myDataBis" (keyup)="changeTextBis(textInputBis.value)" #textInputBis>
+<br>
+<input type="text" [value]="twoWay" (keyup)="changeTextBis(textTwoWay.value)" #textTwoWay>

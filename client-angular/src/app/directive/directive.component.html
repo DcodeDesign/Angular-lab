@@ -1,0 +1,8 @@
+<h3> Directive </h3>
+
+<p [appColor] [HexaColor]="'#951703'" tooltip="Salut les amis" #text="tooltip"> Ceci est une directive</p>
+{{text.tooltip}}
+
+<p appChangeColor> Je suis une directive d'attribut utilisant le Hostlistener avec le selector [appClick]</p>
+
+<p [appTooltip]="'Salut l\'artiste'"> ici...</p>

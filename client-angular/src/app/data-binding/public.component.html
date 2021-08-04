@@ -1,0 +1,8 @@
+<h3>Data binding</h3>
+<p>{{ text }}</p>
+<p>{{ textBis }}</p>
+
+<app-data-binding [myData]="text" (myDataChange)="myTextChange($event)"
+                  [myDataBis]="textBis" (myDataChangeBis)="myTextChangeBis($event)"
+                  [(twoWay)]="text"
+></app-data-binding>

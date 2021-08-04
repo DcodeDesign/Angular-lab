@@ -1,0 +1,31 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: calc(100%/7 - 2px);
+  text-align: center;
+  cursor: pointer;
+}
+
+li.days {
+  font-weight: bold;
+}
+
+li.grey {
+  color: #ccc;
+}
+
+p.red {
+  color: red;
+}
+
+li:hover {
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=calendar.component.css.map */
