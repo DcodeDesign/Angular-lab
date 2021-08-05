@@ -1,10 +1,25 @@
-<ul>
-  <li><a routerLink="modal">component-modal-two</a></li>
-</ul>
+<span>{{ title }}</span>
 
-<app-calendar-component (selected)="selected = $event"></app-calendar-component>
+<!--
+<app-calendar-month (selected)="selected = $event"></app-calendar-month>
 selected: {{selected | date:'long'}}
 
-<app-calendar-v2></app-calendar-v2>
+<hr>
+<app-calendar-week></app-calendar-week>
+
+<hr>
+<ul>
+  <li><a routerLink="modal">Modal</a></li>
+</ul>
 
 <router-outlet></router-outlet>
+
+<hr>
+<p style="display: inline-block" [appTooltip]="text" [TooltipW]="500">{{text | truncate:20: '...'}}</p>
+<br>
+<p style="display: inline-block" [appTooltip]="text2" [TooltipW]="300" >{{text2 | truncate:20: '...'}}</p>
+<br>
+<p style="display: inline-block">{{text | truncate:20}}</p>
+<br>
+<p style="display: inline-block" [appTooltip]="text2" >{{text2 | truncate: 20: '[...]'}}</p>
+-->

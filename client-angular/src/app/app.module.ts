@@ -4,20 +4,24 @@ import {NgModule} from '@angular/core';
 import {CoreModule} from "./core/core.module";
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { CalendarV2Component } from './calendar-v2/calendar-v2.component';
+import {CalendarMonthComponent} from './shared/components/calendar/calendar-month/calendar-month.component';
+import {CalendarWeekComponent} from './shared/components/calendar/calendar-week/calendar-week.component';
+import {TruncatePipe} from "./shared/pipes/truncate.pipe";
+import {DirectiveModule} from "./shared/components/exemple/directive/directive.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendarComponent,
-    CalendarV2Component,
+    CalendarMonthComponent,
+    CalendarWeekComponent,
+    TruncatePipe
   ],
   imports: [
     CoreModule,
     BrowserModule,
     AppRoutingModule,
+    DirectiveModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

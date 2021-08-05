@@ -1,36 +1,35 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {ComponentFixture, TestBed} from "@angular/core/testing";
+import {AppComponent} from "./app.component";
+import {DebugElement} from "@angular/core";
+import {By} from "protractor";
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+  /*let comp:     AppComponent;
+  let fixture:  ComponentFixture<AppComponent>;
+  let debug:    DebugElement;
+  let el:       HTMLElement;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ comp ],
+    });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    fixture = TestBed.createComponent(comp);
 
-  it(`should have as title 'client-angular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('client-angular');
-  });
+    debug = fixture.debugElement.query(By.css('h1'));
+    el = debug.nativeElement;
+  });*/
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    console.log('test')
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('client-angular app is running!');
-  });
-});
+  // declaration du module
+  beforeEach(async ()=>{
+   await TestBed.configureTestingModule({
+      declarations: [AppComponent]
+    }).compileComponents() // chargement asynchrone des fichier html et css
+  })
+
+  // test
+  it('App title', () => {
+      const fixture = TestBed.createComponent(AppComponent)
+      console.log(fixture.nativeElement.querySelector('span'));
+      console.log(fixture.nativeElement.querySelector('span').innerText);
+  })
+})
